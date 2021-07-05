@@ -1,5 +1,6 @@
 module.exports = {
   lintOnSave: false,
+  publicPath: '/gralig-vue',
   css: {
     loaderOptions: {
       scss: {
