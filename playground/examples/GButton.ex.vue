@@ -1,6 +1,6 @@
 <template>
   <div class="g-button-example">
-    <h4 class="header mb-3">Buttons</h4>
+    <h4 class="header my-3">Buttons => (GButton.vue)</h4>
 
     <!-- Types -->
     <h5 class="header mb-2">Types</h5>
@@ -52,7 +52,7 @@ import { GButton } from '@/components'
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
-  name: 'Buttons',
+  name: 'ButtonEx',
   components: {
     GButton,
   },
