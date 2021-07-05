@@ -1,9 +1,9 @@
 <template>
   <div class="example-loader">
     <!-- Components -->
-    <template v-for="c in components">
-      <Component :is="c" :key="c.name" />
-    </template>
+    <div v-for="c in components" :key="c.name" class="component-container pb-6">
+      <Component :is="c" />
+    </div>
 
     <!-- Loader -->
     <div v-if="loading" class="progress-circle loading circle-turn">
@@ -48,6 +48,10 @@ export default defineComponent({
 .example-loader {
   .progress-circle {
     margin-top: 40%;
+  }
+
+  .component-container {
+    border-bottom: 1px solid #ccc;
   }
 }
 </style>
