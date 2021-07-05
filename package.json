@@ -10,7 +10,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:unit-update": "vue-cli-service test:unit --updateSnapshot",
     "test:unit-coverage": "vue-cli-service test:unit --coverage",
-    "deploy": "echo __deploy script__"
+    "deploy": "echo __deploy script__",
+    "release": "standard-version --release-as patch"
   },
   "repository": {
     "type": "git",
