@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'gralig';
+@import './mixins.scss';
 
 html,
 body {

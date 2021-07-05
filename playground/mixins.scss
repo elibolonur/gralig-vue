@@ -1,0 +1,44 @@
+// Spacing helper classes
+$spaceamounts: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, auto);
+$sides: (
+  "a": "all",
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+  "x": "xaxis",
+  "y": "yaxis",
+);
+
+@each $space in $spaceamounts {
+  @each $sideKey, $sidespaceVal in $sides {
+    // if sideKey is a, x or y, do not set $property to anything
+    $property: if($sideKey == "a" or $sideKey == "x" or $sideKey == "y", "", -#{$sidespaceVal});
+    // if current spacing is auto, return auto otherwise, return calculation
+    $spaceVal: if($space == auto, auto, #{$space * 4}px);
+
+    .m#{$sideKey}-#{$space} {
+      @if ($sideKey == "x") {
+        margin-left: #{$spaceVal} !important;    
+        margin-right: #{$spaceVal} !important;    
+      } @else if ($sideKey == "y") {
+        margin-top: #{$spaceVal} !important;
+        margin-bottom: #{$spaceVal} !important;
+      } @else {
+        margin#{$property}: #{$spaceVal} !important;        
+      }
+    }
+
+    .p#{$sideKey}-#{$space} {
+      @if ($sideKey == "x") {
+        padding-left: #{$spaceVal} !important;    
+        padding-right: #{$spaceVal} !important;    
+      } @else if ($sideKey == "y") {
+        padding-top: #{$spaceVal} !important;
+        padding-bottom: #{$spaceVal} !important;
+      } @else {
+        padding#{$property}: #{$spaceVal} !important;        
+      }
+    }
+  }
+}
