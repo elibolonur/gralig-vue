@@ -4,7 +4,7 @@
   "description": "Gralig Vue.js component library",
   "main": "dist/index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve playground/main.js",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
