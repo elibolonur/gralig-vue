@@ -6,19 +6,19 @@
     </div>
 
     <!-- Loader -->
-    <div v-if="loading" class="progress-circle loading circle-turn">
-      <svg width="80" height="80" viewBox="0 0 80 80">
-        <circle class="progress-circle-value" cx="40" cy="40" r="33" fill="none" />
-      </svg>
-    </div>
+    <GLoader v-if="loading" class="g-loader" type="circle" />
   </div>
 </template>
 
 <script>
+import { GLoader } from '@/components'
 import { defineComponent, onMounted, reactive, toRefs } from '@vue/composition-api'
 
 export default defineComponent({
   name: 'DemoViewer',
+  components: {
+    GLoader,
+  },
   setup() {
     const state = reactive({
       loading: true,
@@ -46,7 +46,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .example-loader {
-  .progress-circle {
+  .g-loader {
     margin-top: 40%;
   }
 
