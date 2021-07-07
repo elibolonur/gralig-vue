@@ -6,7 +6,7 @@
 
 <script>
 import { computed, defineComponent } from '@vue/composition-api'
-import { validateColor } from '@/helpers/validators'
+import { validateColor } from '../../helpers/validators'
 
 export default defineComponent({
   name: 'GButton',

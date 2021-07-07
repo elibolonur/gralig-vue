@@ -6,7 +6,7 @@
 import GProgressBar from './GProgress.bar.vue'
 import GProgressCircle from './GProgress.circle.vue'
 import { computed, defineComponent } from '@vue/composition-api'
-import { validateColor } from '@/helpers/validators'
+import { validateColor } from '../../helpers/validators'
 
 export default defineComponent({
   name: 'GProgress',

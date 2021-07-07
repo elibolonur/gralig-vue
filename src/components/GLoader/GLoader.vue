@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { GProgress } from '@/components'
+import { GProgress } from '../index'
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
