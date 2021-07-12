@@ -1,5 +1,5 @@
 <template>
-  <div class="list-item">
+  <div class="gra-list-item">
     <slot />
   </div>
 </template>

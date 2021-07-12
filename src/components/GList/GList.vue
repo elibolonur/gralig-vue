@@ -19,7 +19,7 @@ export default defineComponent({
     const listAttrs = computed(() => ({
       class: {
         list: !props.block,
-        'block-list': props.block,
+        'gra-block-list': props.block,
       },
       disabled: props.disabled,
     }))

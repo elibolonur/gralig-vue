@@ -1,11 +1,11 @@
 <template>
-  <GProgress v-if="type === 'bar'" class="loading" />
-  <GProgress v-else-if="type === 'circle'" class="loading circle-turn" type="circle" />
-  <GProgress v-else-if="type === 'circle-pieces'" class="loading circle-turn-pieces" type="circle" />
-  <div v-else class="loading-dots">
-    <span class="loading-dot dot-1" />
-    <span class="loading-dot dot-2" />
-    <span class="loading-dot dot-3" />
+  <GProgress v-if="type === 'bar'" class="gra-loading" />
+  <GProgress v-else-if="type === 'circle'" class="gra-loading gra-circle-turn" type="circle" />
+  <GProgress v-else-if="type === 'circle-pieces'" class="gra-loading gra-circle-turn-pieces" type="circle" />
+  <div v-else class="gra-loading-dots">
+    <span class="gra-loading-dot dot-1" />
+    <span class="gra-loading-dot dot-2" />
+    <span class="gra-loading-dot dot-3" />
   </div>
 </template>
 

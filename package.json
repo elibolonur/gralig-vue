@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/elibolonur/gralig-vue#readme",
   "dependencies": {
-    "gralig": "^0.7.0"
+    "gralig": "^1.0.0"
   },
   "devDependencies": {
     "@pitcher/eslint-config": "^1.2.1",

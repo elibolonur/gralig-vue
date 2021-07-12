@@ -1,8 +1,8 @@
 <template>
   <div v-bind="progressAttrs" v-on="progressListeners">
     <svg width="80" height="80" viewBox="0 0 80 80">
-      <circle class="progress-circle-back" cx="40" cy="40" r="33" fill="none" />
-      <circle class="progress-circle-value" cx="40" cy="40" r="33" fill="none" v-bind="progressValueAttrs" />
+      <circle class="gra-progress-circle-back" cx="40" cy="40" r="33" fill="none" />
+      <circle class="gra-progress-circle-value" cx="40" cy="40" r="33" fill="none" v-bind="progressValueAttrs" />
     </svg>
   </div>
 </template>
@@ -46,7 +46,7 @@ export default defineComponent({
 
     const progressAttrs = computed(() => ({
       class: {
-        'progress-circle': true,
+        'gra-progress-circle': true,
         small: props.small,
         large: props.large,
         [`${props.color}`]: !!props.color,
