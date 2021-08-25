@@ -1,9 +1,9 @@
 <template>
-  <details class="dropdown">
-    <summary class="dropdown-wrapper" :style="summaryStyle">
+  <details class="gra-dropdown">
+    <summary class="gra-dropdown-wrapper" :style="summaryStyle">
       <span v-bind="buttonAttrs" v-on="buttonListeners">Dropdown</span>
     </summary>
-    <GList class="dropdown-list" block>
+    <GList class="gra-dropdown-list" block>
       <slot />
     </GList>
   </details>
@@ -46,15 +46,15 @@ export default defineComponent({
   setup(props, ctx) {
     const buttonAttrs = computed(() => ({
       class: {
-        btn: true,
-        'dropdown-btn': true,
-        'btn-outline': props.outline,
-        'btn-clear': props.clear,
-        'btn-small': props.small,
-        'btn-large': props.large,
-        'btn-full-width': props.fullWidth,
-        [`btn-${props.color}`]: !!props.color && !props.disabled,
-        'btn-disabled': props.disabled,
+        'gra-btn': true,
+        'gra-dropdown-btn': true,
+        'gra-btn-outline': props.outline,
+        'gra-btn-clear': props.clear,
+        'gra-btn-small': props.small,
+        'gra-btn-large': props.large,
+        'gra-btn-full-width': props.fullWidth,
+        [`gra-btn-${props.color}`]: !!props.color && !props.disabled,
+        'gra-btn-disabled': props.disabled,
       },
     }))
 
@@ -72,9 +72,9 @@ export default defineComponent({
 <style lang="scss">
 @import 'gralig/scss/components/_dropdown.scss';
 
-.btn.btn-disabled,
-.btn:link.btn-disabled,
-.btn:visited.btn-disabled {
+.gra-btn.gra-btn-disabled,
+.gra-btn:link.gra-btn-disabled,
+.gra-btn:visited.gra-btn-disabled {
   background-color: rgb(182, 182, 182);
 }
 </style>

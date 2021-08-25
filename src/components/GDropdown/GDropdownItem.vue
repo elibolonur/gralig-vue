@@ -1,9 +1,9 @@
 <template>
-  <GListItem class="dropdown-list-item">
-    <div v-if="!link" class="dropdown-list-link list-link" v-on="itemListeners">
+  <GListItem class="gra-dropdown-list-item">
+    <div v-if="!link" class="gra-dropdown-list-link gra-list-link" v-on="itemListeners">
       <slot />
     </div>
-    <a v-else class="dropdown-list-link list-link" :href="to" :target="target" v-on="itemListeners">
+    <a v-else class="gra-dropdown-list-link gra-list-link" :href="to" :target="target" v-on="itemListeners">
       <slot />
     </a>
   </GListItem>
@@ -38,7 +38,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.dropdown-list-item {
+.gra-dropdown-list-item {
   color: $color-link-font;
 }
 </style>

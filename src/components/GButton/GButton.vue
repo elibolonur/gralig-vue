@@ -37,13 +37,13 @@ export default defineComponent({
   setup(props, ctx) {
     const buttonAttrs = computed(() => ({
       class: {
-        btn: true,
-        'btn-outline': props.outline,
-        'btn-clear': props.clear,
-        'btn-small': props.small,
-        'btn-large': props.large,
-        'btn-full-width': props.fullWidth,
-        [`btn-${props.color}`]: !!props.color,
+        'gra-btn': true,
+        'gra-btn-outline': props.outline,
+        'gra-btn-clear': props.clear,
+        'gra-btn-small': props.small,
+        'gra-btn-large': props.large,
+        'gra-btn-full-width': props.fullWidth,
+        [`gra-btn-${props.color}`]: !!props.color,
       },
       disabled: props.disabled,
     }))

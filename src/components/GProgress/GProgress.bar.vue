@@ -1,6 +1,6 @@
 <template>
   <span v-bind="progressAttrs" v-on="progressListeners">
-    <span class="progress-bar-value" v-bind="progressValueAttrs" />
+    <span class="gra-progress-bar-value" v-bind="progressValueAttrs" />
   </span>
 </template>
 
@@ -43,7 +43,7 @@ export default defineComponent({
 
     const progressAttrs = computed(() => ({
       class: {
-        'progress-bar': true,
+        'gra-progress-bar': true,
         small: props.small,
         large: props.large,
       },
