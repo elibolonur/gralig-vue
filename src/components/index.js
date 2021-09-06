@@ -1,4 +1,5 @@
 export { default as GButton } from './GButton/GButton.vue'
+export { default as GCheckbox } from './GCheckbox/GCheckbox.vue'
 export { default as GProgress } from './GProgress/GProgress.vue'
 export { default as GList } from './GList/GList.vue'
 export { default as GListItem } from './GListItem/GListItem.vue'
