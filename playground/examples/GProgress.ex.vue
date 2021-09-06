@@ -33,7 +33,7 @@
 
     <!-- Sizes -->
     <h5 class="header mb-2">Sizes</h5>
-    <div class="u-flex u-flex-ai-c">
+    <div class="gra-flex gra-flex-ai-c">
       <GProgress type="circle" percentage="70" small />
       <GProgress type="circle" percentage="70" class="ml-3" />
       <GProgress type="circle" percentage="70" large class="ml-3" />
@@ -43,7 +43,7 @@
 
     <!-- Colors -->
     <h5 class="header mb-2">Colors</h5>
-    <div class="u-flex u-flex-ai-c">
+    <div class="gra-flex gra-flex-ai-c">
       <GProgress type="circle" color="blue" percentage="70" />
       <GProgress type="circle" color="yellow" percentage="70" class="ml-3" />
       <GProgress type="circle" color="green" percentage="70" class="ml-3" />
