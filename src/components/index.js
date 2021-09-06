@@ -1,3 +1,4 @@
+export { default as GAlert } from './GAlert/GAlert.vue'
 export { default as GButton } from './GButton/GButton.vue'
 export { default as GCheckbox } from './GCheckbox/GCheckbox.vue'
 export { default as GSwitch } from './GSwitch/GSwitch.vue'
