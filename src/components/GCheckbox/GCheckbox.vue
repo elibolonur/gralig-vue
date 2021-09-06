@@ -37,8 +37,8 @@ export default defineComponent({
   setup(props) {
     const checkboxAttrs = computed(() => ({
       class: {
-        'gra-custom-form-control': true,
         'gra-checkbox': true,
+        'gra-custom-form-control': true,
         [`${props.color}`]: !!props.color,
       },
       value: props.value,
