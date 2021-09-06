@@ -61,7 +61,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .g-button-example {
-  .btn:not(:last-child) {
+  .gra-btn:not(:last-child) {
     margin-right: 1em;
   }
 }
