@@ -33,7 +33,7 @@ export default defineComponent({
       validator: validateColor,
     },
   },
-  emits: ['input', 'click'],
+  emits: ['input'],
   setup(props) {
     const switchAttrs = computed(() => ({
       class: {
