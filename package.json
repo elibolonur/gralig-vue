@@ -29,7 +29,8 @@
   },
   "homepage": "https://github.com/elibolonur/gralig-vue#readme",
   "dependencies": {
-    "gralig": "^1.0.0"
+    "gralig": "^1.0.0",
+    "webpack-inject-plugin": "^1.5.5"
   },
   "devDependencies": {
     "@pitcher/eslint-config": "^1.2.1",
