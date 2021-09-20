@@ -1,6 +1,8 @@
 export { default as GAlert } from './GAlert/GAlert.vue'
 export { default as GButton } from './GButton/GButton.vue'
 export { default as GCheckbox } from './GCheckbox/GCheckbox.vue'
+export { default as GRadio } from './GRadio/GRadio.vue'
+export { default as GRadioGroup } from './GRadioGroup/GRadioGroup.vue'
 export { default as GSwitch } from './GSwitch/GSwitch.vue'
 export { default as GProgress } from './GProgress/GProgress.vue'
 export { default as GList } from './GList/GList.vue'
