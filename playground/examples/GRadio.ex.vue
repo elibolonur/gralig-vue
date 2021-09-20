@@ -36,7 +36,7 @@ export default defineComponent({
     const model = ref('blue')
 
     const input = () => {
-      console.log('INPUT', model.value)
+      console.log('GRadioGroup input:', model.value)
     }
 
     return { model, input }
