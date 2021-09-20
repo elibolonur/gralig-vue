@@ -54,5 +54,4 @@ export default defineComponent({
 
 <style lang="scss">
 @import 'gralig/scss/components/_checkbox.scss';
-@import 'gralig/scss/components/_form.scss';
 </style>

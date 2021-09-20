@@ -17,8 +17,10 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new InjectPlugin(() => {
-        // Import all.scss file only once through JS entry
-        return "import 'gralig/scss/base/all.scss'"
+        // Import all *.scss file only once through JS entry
+        const required = [`import 'gralig/scss/base/all.scss';`, `import 'gralig/scss/components/_form.scss';`]
+
+        return required.join(' ')
       }),
     ],
   },
