@@ -45,7 +45,7 @@ export default defineComponent({
       disabled: props.disabled,
     }))
 
-    const randomID = computed(() => uid(1, 'id-'))
+    const randomID = computed(() => uid(1, 'cb-'))
 
     return { checkboxAttrs, randomID }
   },
