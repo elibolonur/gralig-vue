@@ -1,15 +1,11 @@
-<template>
-  <div class="gra-list-item">
-    <slot />
-  </div>
-</template>
-
 <script>
-import { defineComponent } from '@vue/composition-api'
-
-export default defineComponent({
+export default {
   name: 'GListItem',
-  props: {},
-  setup() {},
-})
+  functional: true,
+  render(createElement, { children, data }) {
+    data.staticClass = 'gra-list-item'
+
+    return createElement('div', data, children)
+  },
+}
 </script>
