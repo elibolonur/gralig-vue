@@ -1,6 +1,6 @@
 <template>
   <div class="g-nav-example">
-    <h4 class="header my-3">Navigation => (GNav.vue)</h4>
+    <h4 class="header my-3">Nav => (GNav.vue)</h4>
 
     <!-- Default -->
     <h5 class="header mb-2">Example</h5>
