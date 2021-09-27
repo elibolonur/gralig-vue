@@ -1,12 +1,12 @@
 <template>
-  <div v-bind="radioAttrs" @click="$emit('click')">
+  <div ref="radioItem" v-bind="radioAttrs" @click="$emit('click')">
     <input
       :id="randomID"
       class="gra-custom-form-input"
       type="radio"
       :disabled="radioAttrs.disabled"
-      :value="value"
-      @click="$emit('input', value)"
+      :value="value || localValue"
+      @click="emitParent"
     />
     <label class="gra-custom-form-label" :for="randomID">
       <slot />
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import { computed, defineComponent } from '@vue/composition-api'
+import { computed, defineComponent, onMounted, ref } from '@vue/composition-api'
 import { uid, validateColor } from '../../helpers'
 
 export default defineComponent({
   name: 'GRadio',
   props: {
     value: {
-      type: String,
+      type: [String, Number],
       default: '',
     },
     disabled: {
@@ -34,7 +34,8 @@ export default defineComponent({
     },
   },
   emits: ['input', 'click'],
-  setup(props) {
+  setup(props, ctx) {
+    const localValue = ref()
     const radioAttrs = computed(() => ({
       class: {
         'gra-radio': true,
@@ -47,7 +48,27 @@ export default defineComponent({
 
     const randomID = computed(() => uid(1, 'radio-'))
 
-    return { radioAttrs, randomID }
+    onMounted(() => {
+      // get self index when mounting
+      const self = ctx.parent.$children.find((item) => item.$el === ctx.refs.radioItem)
+      const selfIndex = ctx.parent.$children.findIndex((item) => item === self)
+
+      localValue.value = selfIndex
+    })
+
+    const emitParent = () => {
+      // emit the value to top if value is used
+      if (props.value) {
+        ctx.emit('input', props.value)
+
+        return
+      }
+
+      // emit self index if no value used
+      ctx.emit('input', localValue.value)
+    }
+
+    return { localValue, radioAttrs, randomID, emitParent }
   },
 })
 </script>

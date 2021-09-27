@@ -12,7 +12,7 @@ export default defineComponent({
   name: 'GRadio',
   props: {
     value: {
-      type: String,
+      type: [String, Number],
       default: '',
     },
   },
